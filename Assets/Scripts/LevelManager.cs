@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     public UILabel UIscoreText;
     public UILabel UIwaveText;
 
-    public static int gameHealth;
+    public static int gameHealth = 10;
     public static int gameScore;
 
     //States

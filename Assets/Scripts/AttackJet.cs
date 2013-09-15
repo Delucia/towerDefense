@@ -15,7 +15,6 @@ public class AttackJet : MonoBehaviour
     
     void Start ()
     {
-        Debug.Log(ScoreValue);
         LevelManager manager = GetComponent("LevelManager") as LevelManager;
         currentHealth = (int)(maxHealth * LevelManager.difficultyMultiplier);
         transform.position = new Vector3(transform.position.x, Random.Range(heightRange.x, heightRange.y), transform.position.z);

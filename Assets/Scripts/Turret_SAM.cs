@@ -25,14 +25,14 @@ public class Turret_SAM : MonoBehaviour
 	    if (Target != null)
 	    {
 	        //rotation
-	        Vector3 aimPoint = Target.position;
+	        Vector3 aimPoint = Target.position - transform.position;
 	        Quaternion desiredRot = Quaternion.LookRotation(aimPoint);
 
             pivot_tilt.rotation = Quaternion.Lerp(pivot_tilt.rotation, desiredRot, Time.deltaTime * turnSpeed);
             pivot_pan.rotation = Quaternion.Lerp(pivot_pan.rotation, desiredRot, Time.deltaTime * turnSpeed);
 
             pivot_pan.eulerAngles = new Vector3(0, pivot_pan.eulerAngles.y, 0);
-            pivot_tilt.eulerAngles = new Vector3(pivot_tilt.eulerAngles.x, pivot_pan.eulerAngles.y, 0);
+            pivot_tilt.eulerAngles = new Vector3(pivot_tilt.eulerAngles.x, pivot_tilt.eulerAngles.y, 0);
 
 
             //fire
