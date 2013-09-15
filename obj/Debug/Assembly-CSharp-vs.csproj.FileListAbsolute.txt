@@ -1,0 +1,10 @@
+D:\PROJECTS\UNITY\TowerDefense\Temp\bin\Debug\Assembly-CSharp.dll
+D:\PROJECTS\UNITY\TowerDefense\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\PROJECTS\UNITY\TowerDefense\Temp\bin\Debug\NGUI.dll
+D:\PROJECTS\UNITY\TowerDefense\Temp\bin\Debug\UnityEditor.dll
+D:\PROJECTS\UNITY\TowerDefense\Temp\bin\Debug\UnityEngine.dll
+D:\PROJECTS\UNITY\TowerDefense\Temp\bin\Debug\Mono.Cecil.dll
+D:\PROJECTS\UNITY\TowerDefense\Temp\bin\Debug\nunit.framework.dll
+D:\PROJECTS\UNITY\TowerDefense\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\PROJECTS\UNITY\TowerDefense\obj\Debug\Assembly-CSharp.dll
+D:\PROJECTS\UNITY\TowerDefense\obj\Debug\Assembly-CSharp.pdb
