@@ -4,6 +4,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class AttackJet : MonoBehaviour
 {
+    public int CashValue;
     public int ScoreValue;
     public Vector2 heightRange;
     public float speed;
@@ -44,6 +45,7 @@ public class AttackJet : MonoBehaviour
         Destroy(gameObject);
         LevelManager.enemyCountInGame--;
         LevelManager.gameScore += ScoreValue;
+        LevelManager.gameCash += CashValue;
     }
 
     private void OnTriggerEnter(Collider other)

@@ -30,7 +30,8 @@ public class InGameGUI : MonoBehaviour
 
 	void Start ()
 	{
-	    structureIndex = 0;
+        LevelManager manager = GetComponent("LevelManager") as LevelManager;
+        structureIndex = 0;
         updateGUI();
 	    buildPanelOpen = false;
 	}
@@ -53,25 +54,34 @@ public class InGameGUI : MonoBehaviour
                 originalMat = lastHitObj.renderer.material;
                 lastHitObj.renderer.material = hoverMat;
             }
+            else
+            {
+                if (lastHitObj)
+                {
+                    lastHitObj.renderer.material = originalMat;
+                    lastHitObj = null;
+                }
+            }
         }
-        else
+        /*else
         {
             if (lastHitObj)
             {
                 lastHitObj.renderer.material = originalMat;
                 lastHitObj = null;
             }
-        }
+        }*/
 
 	    if (Input.GetMouseButtonDown(0) && lastHitObj)
 	    {
 	        if (lastHitObj.tag == "PlacementPlane_Open")
 	        {
-	            int rotationY = Random.Range(0, 360);
+	            //if (LevelManager.gameCash )    
+                    int rotationY = Random.Range(0, 360);
 
-	            GameObject newStructure = Instantiate(structures[structureIndex], lastHitObj.transform.position, lastHitObj.transform.rotation) as GameObject;
-                newStructure.transform.eulerAngles = new Vector3(0, rotationY, 0);
-	            lastHitObj.tag = "PlacementPlane_Taken";
+	                GameObject newStructure = Instantiate(structures[structureIndex], lastHitObj.transform.position, lastHitObj.transform.rotation) as GameObject;
+                    newStructure.transform.eulerAngles = new Vector3(0, rotationY, 0);
+	                lastHitObj.tag = "PlacementPlane_Taken";
 	        }
 	    }
 	}

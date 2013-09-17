@@ -12,9 +12,11 @@ public class LevelManager : MonoBehaviour
     public UILabel UIhealthText;
     public UILabel UIscoreText;
     public UILabel UIwaveText;
+    public UILabel UIcashText;
 
     public static int gameHealth = 10;
     public static int gameScore;
+    public static int gameCash;
 
     //States
     private bool waveActive = false;
@@ -26,6 +28,7 @@ public class LevelManager : MonoBehaviour
     public int maxWaveLevel;
     public float intermissionTime;
     public float difficultyStart = 1f;
+    public int startingCash;
     
     public static float difficultyMultiplier;
     private float nextSpawnTime = 1f;
@@ -40,12 +43,14 @@ public class LevelManager : MonoBehaviour
     {
         SetNextWave();
         StartNextWave();
+        gameCash = startingCash;
     }
 	
 	void Update ()
 	{
 	    UIscoreText.text = gameScore.ToString();
 	    UIhealthText.text = gameHealth.ToString();
+	    UIcashText.text = gameCash.ToString();
 
         if (Time.time >= nextWaveTime && !waveActive)
 	    {
