@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Turret_SAM : MonoBehaviour
 {
-    public int cost;
     public float turnSpeed;
     public float reloadTime = 1f;
     public Transform[] MuzzlePositions;
@@ -18,9 +17,7 @@ public class Turret_SAM : MonoBehaviour
     
     void Start () 
     {
-        LevelManager manager = GetComponent("LevelManager") as LevelManager;
-        LevelManager.gameCash -= cost;
-
+    
     }
 	
 	void Update () 

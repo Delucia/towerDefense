@@ -63,14 +63,7 @@ public class InGameGUI : MonoBehaviour
                 }
             }
         }
-        /*else
-        {
-            if (lastHitObj)
-            {
-                lastHitObj.renderer.material = originalMat;
-                lastHitObj = null;
-            }
-        }*/
+
 
 	    if (Input.GetMouseButtonDown(0) && lastHitObj)
 	    {
